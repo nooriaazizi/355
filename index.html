@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nooria Azizi</title>
+  <style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+    }
+    p.double-space {
+      line-height: 2;
+    }
+    .buttonposition {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .home-button, .project-button, .contact-button {
+      background: #5E5DF0;
+      border-radius: 999px;
+      box-shadow: #5E5DF0 0 10px 20px -10px;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+      opacity: 1;
+      outline: 0 solid transparent;
+      padding: 8px 18px;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: fit-content;
+      word-break: break-word;
+      border: 0;
+    }
+    .content {
+      font-family: "Open Sans", sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #000;
+      border: 3px solid;
+      padding: 0.25em 0.5em;
+      box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+      position: relative;
+    }
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+    .contact-info img {
+      margin-right: 50px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function openSection(sectionId) {
+      var content = '';
+      if (sectionId === 'home-section') {
+        content = `
+          <h1>My Portfolio</h1>
+          <img src="/Users/nooriaazizi/downloads/IMG_0646.jpeg" width="300px" height="auto">
+          <p class="double-space">
+            Hello, My name is Nooria Azizi. I am a computer science major at Queens College. I have experience with C++, Java, Python, and a general 
+            understanding of HTML. As I continue to develop my skills in HTML, I have discovered my newfound passion for web developing and am eager to 
+            learn more and take on new challenges in my field.
+          </p>
+        `;
+      } else if (sectionId === 'projects-section') {
+        content = `
+          <h1>Projects</h1>
+          <img src="https://www.instructables.com/Android-Tip-Calculator/">
+          <p>Here is a picture of a tip calculator app I created.</p>
+        `;
+      } else if (sectionId === 'contact-section') {
+        content = `
+          <h1>Contact</h1>
+          <div class="contact-info">
+            <a href="mailto:nooria.azizi21@qmail.cuny.edu.com">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Microsoft_Office_Outlook_%282013%E2%80%932019%29.svg" width="50" height="50" alt="outlook Icon">
+            </a>
+            <p>nooria.azizi21@qmail.cuny.edu.com</p>
+          </div>
+        `;
+      }
+      
+      var newWindow = window.open('', '_blank');
+      newWindow.document.write('<html><head><title>' + sectionId.replace('-', ' ').toUpperCase() + '</title></head><body>' + content + '</body></html>');
+      newWindow.document.close();
+    }
+  </script>
+</head>
+<body>
+  <div class="buttonposition">
+    <button class="home-button" onclick="openSection('home-section')">HOME</button>
+    <button class="project-button" onclick="openSection('projects-section')">PROJECTS</button>
+    <button class="contact-button" onclick="openSection('contact-section')">CONTACT</button>
+  </div>
+
+  <div id="home-section" class="content">
+    <h1>My Portfolio</h1>
+    <img src="/Users/nooriaazizi/downloads/IMG_0646.jpeg" width="300px" height="auto">
+    <p class="double-space">
+      Hello, My name is Nooria Azizi. I am a computer science major at Queens College. I have experience with C++, Java, Python, and a general 
+      understanding of HTML. As I continue to develop my skills in HTML, I have discovered my newfound passion for web developing and am eager to 
+      learn more and take on new challenges in my field.
+    </p>
+  </div>
+
+  <div id="projects-section" class="content" style="display:none;">
+    <h1>Projects</h1>
+   <img src="https://www.instructables.com/Android-Tip-Calculator/">
+    <p>Here is a picture of a tip calculator app I created.</p>
+  </div>
+
+  <div id="contact-section" class="content" style="display:none;">
+    <h1>Contact</h1>
+    <div class="contact-info">
+      <a href="mailto:nooria.azizi21@qmail.cuny.edu.com">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Microsoft_Office_Outlook_%282018%E2%80%93present%29.svg" width="50" height="50" alt="outlook Icon">
+      </a>
+      <p>nooria.azizi21@qmail.cuny.edu</p>
+    </div>
+  </div>
+</body>
+</html>
+
+

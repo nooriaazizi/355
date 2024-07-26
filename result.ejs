@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Trivia Result</title>
+</head>
+<body>
+  <h1>Quiz Completed!</h1>
+  
+  <!-- Display the user's score and total questions for this game -->
+  <p>Your score: <%= score %> out of <%= totalQuestions %></p>
+  
+  <!-- Display the total number of questions answered across all games -->
+  <p>Total Questions Answered: <%= totalQuestions * totalGames %></p>
+  
+  <!-- Display the cumulative score across all games -->
+  <p>Cumulative Score: <%= cumulativeScore %></p>
+  
+  <!-- Link to return to the home page or start a new game -->
+  <a href="/">Play Again</a>
+</body>
+</html>

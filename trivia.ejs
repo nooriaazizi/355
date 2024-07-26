@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/styles.css">
+  <title>Trivia Question</title> 
+</head>
+<body>
+  <!-- Display the current question index and total number of questions -->
+  <h1>Question <%= currentIndex %> of <%= totalQuestions %></h1>
+  <!-- Display the trivia question -->
+  <p><%= question.question %></p>
+
+  <!-- Form for submitting an answer -->
+  <form action="/answer" method="POST">
+    <!-- Loop through each option and create a radio button for each -->
+    <% options.forEach((option, index) => { %>
+      <div>
+        <!-- Radio button for an answer option -->
+        <input type="radio" id="answer<%= index %>" name="answer" value="<%= option %>" required>
+        <!-- Label for the radio button -->
+        <label for="answer<%= index %>"><%= option %></label>
+      </div>
+    <% }) %>
+    <button type="submit">Submit Answer</button>
+  </form>
+  <!-- Display the current score -->
+  <p>Current Score: <%= score %></p>
+</body>
+</html>

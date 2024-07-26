@@ -1,0 +1,144 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;500;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ffe6f7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #ff66b3;
+    font-family: 'Pacifico', cursive;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ff3399;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff3399;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e60073;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #ff66b3;
+}
+
+input, select {
+    margin: 5px 0 20px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ff66b3;
+    border-radius: 10px;
+    background-color: #ffe6f7;
+    color: #ff3399;
+    text-align: center;
+}
+
+/* Question and Answer Styles */
+.question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff3399;
+    margin-bottom: 20px;
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.option {
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+.option label {
+    color: #ff3399;
+}
+
+/* Score and Result Styles */
+.score, .result {
+    font-size: 20px;
+    color: #ff3399;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result .cumulative-score {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff66b3;
+    margin-top: 10px;
+}
+
+/* Link Styles */
+a {
+    color: white;
+    background-color: #ff3399;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #e60073;
+}
